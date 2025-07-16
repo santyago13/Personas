@@ -23,13 +23,63 @@
       <nav class="text-center bg-body-tertiary py-3">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <i class="bi bi-patch-question fs-4"> Personas </i>
+            <i class="bi bi-person-badge-fill fs-4"> Personas </i>
           </a>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="container py-5">
+      <h1 class="mb-4">Datos de Persona</h1>
 
+      <form id="personaForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control" required />
+        </div>
+        <div class="col-md-3">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" id="edad" class="form-control" required />
+        </div>
+        <div class="col-md-3">
+          <label for="dni" class="form-label">DNI</label>
+          <input type="text" id="dni" class="form-control" required />
+        </div>
+        <div class="col-md-3">
+          <label for="sexo" class="form-label">Sexo</label>
+          <select id="sexo" class="form-select" required>
+            <option value="">Selecciona sexo</option>
+            <option value="H">Hombre</option>
+            <option value="M">Mujer</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="peso" class="form-label">Peso (kg)</label>
+          <input type="number" id="peso" class="form-control" required />
+        </div>
+        <div class="col-md-3">
+          <label for="altura" class="form-label">Altura (cm)</label>
+          <input type="number" id="altura" class="form-control" required />
+        </div>
+        <div class="col-md-3">
+          <label for="anioNacimiento" class="form-label"
+            >Año de nacimiento</label
+          >
+          <input
+            type="number"
+            id="anioNacimiento"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Crear Persona</button>
+        </div>
+      </form>
+
+      <div class="mt-4">
+        <h3>Resultados</h3>
+        <div id="resultado" class="p-3 bg-dark-subtle rounded"></div>
+      </div>
     </main>
     <footer>
       <div class="bg-body-tertiary text-center py-3">
